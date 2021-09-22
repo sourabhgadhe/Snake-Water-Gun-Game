@@ -1,0 +1,58 @@
+import random
+
+def gamewin(comp, you):
+        
+    if (you!='s' and you!='w' and you!='g'):
+        return complex
+        
+    elif comp == you:
+        return None
+        
+    elif r==1:
+        comp=='s'
+        if you=='w':
+            return False
+        elif you=='g':
+            return True
+
+    elif r==2:
+        comp=='w'
+        if you=='s':
+            return True
+        elif you=='g':
+            return False
+
+    elif r==3:
+        comp=='g'
+        if you=='s':
+            return False
+        elif you=='w':
+            return True
+    
+
+print("Comp's Turn: Snake(s) Water(w) Gun(g)")
+r=random.randint(1,3)
+
+if r==1:
+    comp='s'
+elif r==2:
+    comp='w'
+elif r==3:
+    comp='g'
+    
+    
+you=(input("Your turn: Snake(s) Water(w) Gun(g) "))
+
+print("You chose: ", you)
+print("Comp chose: ",comp)
+
+a=gamewin(comp,you)
+
+if a==complex:
+    print("Pls Choose 's' for Snake, 'w' for Water and 'g' for Gun")
+elif a==True:
+    print("You win !!")
+elif a==False:
+    print("You Lose !!")
+elif a==None:
+    print("It's a tie !!")
